@@ -1,16 +1,14 @@
-// import './fonts'
-
+import 'modules/ui/tgr/global.scss'
+import Page from 'modules/ui/tgr/page'
 import * as React from 'react'
-// import Helmet from './Helmet'
 
-import 'modules/ui/core/global.scss'
-import Page from 'modules/ui/core/page'
 import Routes from '../routes'
-
-import navbar from './navbar'
+// import Helmet from './Helmet'
+// import './fonts'
+import './reset.css'
 
 export default function App() {
-  return <Page navbar={navbar}>
+  return <Page>
     {/* <Helmet /> */}
     <Routes />
   </Page>

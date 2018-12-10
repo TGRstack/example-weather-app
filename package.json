@@ -1,7 +1,7 @@
 {
-  "name": "tgr-react-app",
+  "name": "tgr-weather-app",
   "version": "1.0.0",
-  "description": "TGRStack TS-React-Module w/ Declarations, WebPack, and Opinions.",
+  "description": "TGRstack weather client app",
   "main": "build/index.html",
   "typings": "./build/index",
   "dependencies": {

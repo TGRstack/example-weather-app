@@ -2,9 +2,24 @@ import Gx from '@tgrx/gx'
 import * as React from 'react'
 import Helmet from 'react-helmet'
 
-import Hello from 'modules/ui/core/hello'
-import List from 'modules/ui/core/list'
+import WeatherApp, {
+  IWeatherItem,
+} from 'components/'
 import * as S from './Home.css'
+
+const weatherItem = ({temp}: {temp: number[]}): IWeatherItem => {
+  return {
+    temp: {
+      current: temp[0],
+      high: temp[2],
+      low: temp[1],
+    }
+  }
+}
+const weatherData: IWeatherItem[] = [
+  weatherItem({temp: [10, 7, 13]}),
+  weatherItem({temp: [15, 9, 22]}),
+]
 
 function HomeEntrancePage() {
   return (
@@ -14,9 +29,7 @@ function HomeEntrancePage() {
       </Helmet>
 
       <Gx col={12}>
-        <List ordered>
-          {Hello('Welcome to TGR React-App skeleton')}
-        </List>
+        <WeatherApp data={weatherData} />
       </Gx>
     </div>
   )

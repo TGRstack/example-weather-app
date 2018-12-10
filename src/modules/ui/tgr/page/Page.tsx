@@ -1,17 +1,17 @@
 import * as React from 'react'
 
-import Header, { IHeader } from '../header'
+// import MobileHeader from '../mobileHeader'
 import Body from './Body'
 import Content from './Content'
 
 interface IProps {
   children: React.ReactChild |  React.ReactChild[],
-  navbar: IHeader,
+  // navbar?: IHeader,
 }
 
-export default function Page({children, navbar}: IProps) {
+export default function Page({children}: IProps) {
   return <Body>
-    <Header {...navbar} />
+    {/* <MobileHeader /> */}
     <Content>
       {children}
     </Content>
