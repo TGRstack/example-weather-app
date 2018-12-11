@@ -6,7 +6,7 @@
 import * as Stc from 'modules/ui/tgr/common.scss'
 import * as React from 'react'
 // import { ItemTemperature } from '.'
-import { IWeatherItem, TempMinMax } from '..'
+import { IWeatherItem, TempMinMax, WeatherImage } from '..'
 import * as S from './WeatherItem.scss'
 
 interface IProps {
@@ -23,7 +23,10 @@ export default function WeatherItem({data}: IProps): JSX.Element  {
   }
 
   return  <div className={[S.container, Stc.spaceBetween].join(' ')}>
-    <Day date={data.time} />
+    <div className={[S.left, Stc.spaceBetween].join(' ')}>
+      <Day date={data.time} />
+      <WeatherImage img={data.condition.image} />
+    </div>
     <TempMinMax min={data.temp.low} max={data.temp.high} />
   </div>
 }

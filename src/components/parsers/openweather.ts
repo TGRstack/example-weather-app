@@ -1,4 +1,5 @@
 import { IWeatherData, IWeatherItem } from '../'
+import Conditions from './openweather.conditionCodes'
 import {
   IList,
   IList16,
@@ -11,6 +12,7 @@ interface IProps {
   currentCity: IOpenWeatherCurrent,
   forecastCity: IOpenWeatherForecast16,
 }
+
 // HELPERS
 const isoDate = (d: number) => new Date(d).toISOString().substr(0, 10)
 const numberSingleSig = (n: number) => parseFloat(n.toFixed(1))
@@ -27,7 +29,9 @@ const getCityMeta = (d: IOpenWeatherCurrent) => ({
 const getCityId = (d: IOpenWeatherCurrent) => d.id
 const getCurrentData = (d: IOpenWeatherCurrent| IList): IWeatherItem => ({
   condition: {
+    code: d.weather[0].id,
     description: d.weather[0].description.toLowerCase(),
+    image: Conditions.get(d.weather[0].id).img,
     name: d.weather[0].main.toLowerCase(),
   },
   date: isoDate(unixToJsTime(d.dt)),
@@ -43,7 +47,9 @@ const getForecastData = (d: IOpenWeatherForecast16): IWeatherItem[] => {
 
   return next5Days.map((i: IList16) => ({
     condition: {
+      code: i.weather[0].id,
       description: i.weather[0].description.toLowerCase(),
+      image: Conditions.get(i.weather[0].id).img,
       name: i.weather[0].main.toLowerCase(),
     },
     date: isoDate(unixToJsTime(i.dt)),

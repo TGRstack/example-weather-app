@@ -5,19 +5,22 @@
 2. [x] determine full shape of data and improve details of WeatherCurrent & WeatherForecast components
    1. Use openWeather's 16daily forecast instead of 5-day forecast and combining them
 3. [x] format/style WeatherCurrent and WeatherDailyForecast components
-4. [ ] render an image for each day 
-5. create WeatherDetail page per day
-   1. 24-hour breakdown if available
-6. create mobileHeader to navigate back to the main page from the detail page
+4. [x] render an image for each day
 7. setup graphql state & network requests
 8. User welcome screen capture initial city to use
 
+
+## STRETCH GOALS - sorry
+9.  create WeatherDetail page per day
+   1. 24-hour breakdown if available
+10. create mobileHeader to navigate back to the main page from the detail page
+
 ## STRETCH GOALS
 
-9. config/cities page
+1. config/cities page
    1. add slideOut navigation to mobileHeader
-10. testing per component (positive & negative)
-11.  integration test of API requests
+2.  testing per component (positive & negative)
+3.  integration test of API requests
 
 ## Gold plating
 

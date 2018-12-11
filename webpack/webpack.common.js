@@ -2,6 +2,7 @@ const Dotenv = require('dotenv-webpack');
 const path = require('path')
 const WriteFilePlugin = require('write-file-webpack-plugin');
 // const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const paths = require('./paths')
 
@@ -67,14 +68,16 @@ const globalCss = {
   loaders: ["style-loader", 'sass-loader',],
 }
 
+// FIXME: image loading isn't working, using copyWebpack instead
 // ## FILES like csv and images
 const files = {
-  // test: /\.(png|jpg|gif)$/,
+  // test: /\.(png|gif|jpe?g)$/,
   exclude: [/\.jsx?$/, /\.tsx?$/, /\.s?css$/, /\.html$/, /\.json$/],
   use: [
     {
       loader: 'file-loader',
       options: {
+        publicPath: 'assets/',
         name (file) {
           if (process.env === 'development' || process.env === undefined) {
             return '[path][name].[ext]'
@@ -94,7 +97,7 @@ module.exports = {
     __filename: false,
   },
   resolve: {
-    extensions: ['.csv', '.ts', '.tsx', '.js', '.json', '.jsx'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
     modules: [paths.src._, paths.node_modules],
     // plugins: [
     //   typescript.paths,
@@ -103,9 +106,9 @@ module.exports = {
   module: {
     rules: [
       typescript.loader,
+      files,
       globalCss,
       moduleCss,
-      files,
     ],
   },
   plugins: [
@@ -115,6 +118,11 @@ module.exports = {
       safe: true,    // load '.env.example' to verify the '.env' variables are all set. Can also be a string to a different file.
       systemvars: true, // load all the predefined 'process.env' variables which will trump anything local per dotenv specs.
       // silent: true   // hide any errors
+    }),
+    new CopyWebpackPlugin([{
+      from: paths.src.assets, to: paths.STATICS
+    }], {
+      debug: 'info'
     }),
   ],
 };

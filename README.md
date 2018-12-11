@@ -2,7 +2,16 @@
   <h1 align='center'>Weather App (TGRStack)</h1>
 </p>
 
+## Docs
+
+Check out the folder called docs => `./docs/`
+
+- ASSIGNMENT.md - the coding homework
+- JOURNAL.md    - my thoughts along the way
+- PLAN.md       - plan of commits and notes for gold plating
+
 ## Demo
+
 Check out the netlify demo link: 
 
 ## Getting Started

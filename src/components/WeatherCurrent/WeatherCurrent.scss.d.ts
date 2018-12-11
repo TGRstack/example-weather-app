@@ -13,6 +13,7 @@ export interface IWeatherCurrentScss {
   'footer': string
   'centerText': string
   'header': string
+  'content': string
   'uppercaseFirstLetter': string
   'today': string
 }

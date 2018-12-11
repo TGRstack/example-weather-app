@@ -8,6 +8,7 @@ export interface IWeatherItemScss {
   'accent_secondary': string
   'accent_primary--dark': string
   'accent_secondary--dark': string
+  'left': string
 }
 
 export const locals: IWeatherItemScss

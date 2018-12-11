@@ -112,4 +112,23 @@ From `./Plan.md`
 4. format/style WeatherCurrent and WeatherDailyForecast components
 ```
 
-## Commit 2
+## Commit 2,3 - 2315
+
+Commit 2 added a global function to the browser to reopen the window in a mobile size.
+
+Commit 3 is from `./Plan.md`
+```
+4.  render an image for each day
+```
+
+*My hand is really hurting from the burn and I have an onsite tomorrow.*
+I'm moving the weather detail page to a stretch goal. I hope there's enough other code here to show you that I can contribute high quality to the team.
+
+## Commit 4 - 0030?
+
+from `./PLAN.md`
+
+```bash
+7. setup graphql state & network requests
+8. User welcome screen capture initial city to use
+```

@@ -26,6 +26,8 @@ export interface IWeatherTemperature  {
   low: number,
 }
 export interface IWeatherCondition {
+  code: number,
   description: string,
+  image: string | undefined,
   name: string,
 }

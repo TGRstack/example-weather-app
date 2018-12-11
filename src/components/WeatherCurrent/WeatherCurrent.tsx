@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { IWeatherData, IWeatherItem, TempMinMax } from '..'
+import { IWeatherData, IWeatherItem, TempMinMax, WeatherImage, } from '..'
 import * as S from './WeatherCurrent.scss'
 
 interface IProps {
@@ -14,6 +14,14 @@ export default function WeatherCurrent({data, meta}: IProps): JSX.Element {
     <h2>{data.condition.name}</h2>
   </header>
 
+  // Content
+  const Image = () => <div className={S.content}>
+    <WeatherImage img={data.condition.image} size="large" />
+  </div>
+  const Condition = () => <div className={S.content}>
+    <span>{data.condition.description}</span>
+  </div>
+
   // <footer /> is something different
   const Footer = () => <div className={S.footer}>
     <div className={S.today}>Today</div>
@@ -22,7 +30,8 @@ export default function WeatherCurrent({data, meta}: IProps): JSX.Element {
 
   return  <div className={S.container}>
      <Header />
-     {/* <Condition /> */}
+     <Image />
+     <Condition />
      <Footer />
    </div>
 }

@@ -12,23 +12,6 @@ export interface IOpenWeatherCurrent {
   weather:    IWeatherCurrent[]
   wind:       IWind5
 }
-// NOTE: delete in celanup
-// export interface IOpenWeatherCombined {
-//   // not available on forecast.list
-//   base?:       string
-//   cod?:        number
-//   coord?:      ICoord
-//   id?:         number
-//   name?:       string
-//   visibility?: number
-
-//   clouds:     IClouds
-//   dt:         number
-//   main:       IMain
-//   sys:        ISys
-//   weather:    IWeatherCurrent[]
-//   wind:       IWind5
-// }
 
 export interface IOpenWeatherForecast {
   cod:     string

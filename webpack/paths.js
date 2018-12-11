@@ -8,6 +8,8 @@ const rootPath = path.resolve(__dirname, '..')
 const buildPath = path.resolve(rootPath, 'build')
 const srcPath = path.resolve(rootPath, 'src')
 
+const STATICS = 'assets'
+
 const build = {
   _: buildPath,
   client: path.resolve(buildPath),
@@ -23,11 +25,13 @@ const src = {
     _: path.join(srcPath, 'client'),
     template: path.join(srcPath, 'client', 'index.template.html'),
   },
+  assets: path.join(srcPath, STATICS),
 }
 
 module.exports = {
   _: rootPath,
   build,
   src,
-  node_modules: path.resolve(rootPath, 'node_modules')
+  node_modules: path.resolve(rootPath, 'node_modules'),
+  STATICS,
 }
