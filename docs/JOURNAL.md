@@ -43,9 +43,73 @@ const FallbackRoute = <R p='/config/services/' c={ConfigServices} exact />
   </AuthWall>
 </Routes>
 
+<hr />
+
 # 20181210 - LOG - start 0830
 
 0815: Create PLAN.md
+
 0845: Develop w/ Chrome Device Toolbar set to: iPhone 6/7/8 150%
+
 0855: Copy images and reference: https://github.com/stage88/react-weather/
-0905: 10 minute break to coordinate my day and reply to some emails
+
+0905: [resume] 10 minute [break] to coordinate my day and reply to some 
+emails
+
+0911: Commit#0, "Plan, Assignment, Journal" created
+
+0935: Offload (from my mind) some more goldplating ideas to "PLAN.md"
+
+~ 60 minute PLAN TOTAL
+
+0947: [break]computer ran out of SWAP, rebooting (uptime 21.5d)
+
+1000: [resume] to reboot computer, restart dev experience, bathroom
+
+~ 20 minute CODE TOTAL
+
+1025: partial-Commit#1, sample WeatherData and parser for Today & Forecast
+
+1025: [break] prepare for interview that WENT until 1145
+
+1200: [resume] Commit#1
+
+1205: partial-Commit#1, typescript sample WeatherData and parse to app data
+
+1210: [resume] 4 minutes [break] dealing w/ frozen VSCode, downloading latest version
+
+1235: partial-Commit#1, openweather to MVP app data parser typescript
+
+1305: partial-Commit#1, [changingDirection]
+I am using 5-day, 3 hour forecast but this doesn't provide hourly data or daily data. Started to make a combiner for daily data and an averager for hourly data. Left the code commented at the bottom of the page to come back to.
+
+~~I should restart w/ 16day daily forecast for the daily forecast data but I'm just going to continue with my current path of doing combined for daily forecasts.~~
+
+**I'm going to restart w/ 16day daily forecast**
+
+1310: [break] prepare for interview that goes until 1430
+
+~ 70 minute PLAN TOTAL
+~ 80 minute CODE TOTAL
+
+1430: [resume]  partial-Commit#1, openweather forecast-16day sample
+
+1500: [break] interview 1610, and a mental break from the day
+
+1900: [resume] had dinner, [burned] right hand w/ boiling water
+
+2045: finish-Commit#1, render current and forecast data w/ structure (w/o images)
+
+## Commit 1 - 2045
+
+From `./Plan.md`
+
+```
+1. this documentation and an init commit
+2. some simple data rendering a WeatherCurrent w/ a 5-day WeatherForecast beneath it, follow stage88 mock
+3. determine full shape of data and improve details of WeatherCurrent & WeatherForecast components
+   1. Use openWeather's 16daily forecast instead of 5-day forecast and combining them
+4. format/style WeatherCurrent and WeatherDailyForecast components
+```
+
+## Commit 2

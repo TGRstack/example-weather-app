@@ -1,0 +1,37 @@
+@import 'app/theme.scss';
+@import 'modules/ui/tgr/common.scss';
+
+.container {
+  width: 100%;
+  height: 40vh;
+  position: relative;
+  
+  @extend .center;
+  @extend .fill_primary;
+}
+
+.header {
+  @extend .centerText;
+
+  h1 {
+    @extend .uppercaseFirstLetter;
+    font-size: 1.5rem;
+  }
+  h2 {
+    @extend .uppercaseFirstLetter;
+    font-size: 1.25rem;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0 10px 10px 10px;
+
+  @extend .spaceBetween;
+}
+
+.today {
+  font-weight: 900;
+}

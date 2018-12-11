@@ -23,6 +23,10 @@ module.exports = {
     default: 'nps lint.fix',
     description: 'Fix lint errors.',
   },
+  ss: {
+    default: 'nps start.server',
+    description: 'Run only the DevServer',
+  },
   t: {
     default: 'nps test',
     description: 'Run tests.',

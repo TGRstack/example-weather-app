@@ -1,0 +1,18 @@
+@import 'app/theme.scss';
+@import 'modules/ui/tgr/common.scss';
+
+.mobileContainer {
+  border: 2px solid $secondary-light; // mobile
+  border-top-width: 0px;
+  width: 375px;
+  height: 667px;
+
+  @extend .center;
+  margin: 0 auto;
+  // align-items: center; /* center flex items vertically */
+
+  @extend .bg_secondary;
+}
+.appContainer {
+  width: 100%;
+}
