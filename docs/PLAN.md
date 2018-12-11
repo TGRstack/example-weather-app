@@ -6,8 +6,8 @@
    1. Use openWeather's 16daily forecast instead of 5-day forecast and combining them
 3. [x] format/style WeatherCurrent and WeatherDailyForecast components
 4. [x] render an image for each day
-7. setup graphql state & network requests
-8. User welcome screen capture initial city to use
+7. [x] setup graphql state & network requests
+8. User welcome screen capture initial city/zipcode to use
 
 
 ## STRETCH GOALS - sorry

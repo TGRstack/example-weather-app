@@ -5,6 +5,7 @@
   "main": "build/index.html",
   "typings": "./build/index",
   "dependencies": {
+    "@tgrx/apollo-link-rest": "0.6.1",
     "@tgrx/apollo-link-state": "0.4.3",
     "@tgrx/gx": "1.0.0-rc4",
     "apollo-cache-inmemory": "1.2.10",
@@ -12,6 +13,7 @@
     "apollo-link": "1.2.4",
     "apollo-link-error": "1.1.2",
     "apollo-link-http": "1.5.7",
+    "apollo-utilities": "1.0.22",
     "classnames": "2.2.6",
     "graphql": "14.0.2",
     "graphql-tag": "2.9.2",

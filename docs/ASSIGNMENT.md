@@ -5,8 +5,8 @@ The forecast is automatically refreshed every five minutes.
 
 - [x] user enters zip code to add a city
 - [x] home renders the current weather and five-day forecast for the city
+- [x] data refreshes every 5 min
 - [ ] details per day
-- [ ] data refreshes every 5 min
 
 ## Stretch goal 1
 

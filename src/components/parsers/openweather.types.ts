@@ -13,11 +13,11 @@ export interface IOpenWeatherCurrent {
   wind:       IWind5
 }
 
-export interface IOpenWeatherForecast {
+export interface IOpenWeatherForecast5 {
   cod:     string
   message: number
   cnt:     number
-  list:    IList[]
+  list:    IList5[]
   city:    ICity
 }
 
@@ -74,15 +74,15 @@ interface ICoord {
   lon: number
 }
 
-export interface IList {
+export interface IList5 {
+  clouds:  IClouds
+  dt_txt:  string
   dt:      number
   main:    IMainClass
-  weather: IWeatherForecast[]
-  clouds:  IClouds
-  wind:    IWind5
   snow:    ISnow
   sys:     ISys
-  dt_txt:  string
+  weather: IWeatherForecast[]
+  wind:    IWind5
 }
 
 interface IClouds {

@@ -1,10 +1,11 @@
 import * as React from 'react'
 import Helmet from 'react-helmet'
 
-import WeatherApp, { openWeatherParser } from 'components/'
+import WeatherApp from 'components/' // , { openWeatherParser }
 import * as S from './Home.css'
 
-import { currentCity, forecastCity16 } from './sampleData'
+// import { currentCity, forecastCity16 } from './sampleData'
+// data={openWeatherParser({currentCity, forecastCity: forecastCity16})}
 
 function HomeEntrancePage() {
   return (
@@ -13,7 +14,7 @@ function HomeEntrancePage() {
         <title>Homepage</title>
       </Helmet>
 
-      <WeatherApp data={openWeatherParser({currentCity, forecastCity: forecastCity16})} />
+      <WeatherApp zipcode={94112} />
     </div>
   )
 }

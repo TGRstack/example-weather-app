@@ -121,14 +121,23 @@ Commit 3 is from `./Plan.md`
 4.  render an image for each day
 ```
 
-*My hand is really hurting from the burn and I have an onsite tomorrow.*
 I'm moving the weather detail page to a stretch goal. I hope there's enough other code here to show you that I can contribute high quality to the team.
 
-## Commit 4 - 0030?
+[break] until 0015 to ice my hand, drink some coffee, and say goodnight to my family. Also added 8GB to my available swap space so my PC doesnt hang.
+
+## Commit 4 - 0100
 
 from `./PLAN.md`
 
 ```bash
 7. setup graphql state & network requests
-8. User welcome screen capture initial city to use
 ```
+
+0230
+- I got stymied by the apollo-utils@1.0.22 bug for a while
+- OpenWeather's 16-day forecast API is now for subscribers only
+- going to go my original route w/ of combining 3-hour chunks by day
+
+0400
+- ending it here, have the 5-day aggregation working
+- creating git repo & deploying to netlify

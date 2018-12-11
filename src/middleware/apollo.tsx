@@ -1,3 +1,4 @@
+import { RestLink } from '@tgrx/apollo-link-rest'
 import { withClientState } from '@tgrx/apollo-link-state'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import { ApolloClient } from 'apollo-client'
@@ -47,6 +48,7 @@ export default class ApolloClientProvider extends React.Component<IProps> {
     super(props)
 
     const links = [
+      this._restLink(),
       this._stateLink,
       this._errorLink,
       this._httpLink
@@ -63,5 +65,10 @@ export default class ApolloClientProvider extends React.Component<IProps> {
     return <ApolloProvider client={this._apolloClient}>
       {this.props.children}
     </ApolloProvider>
+  }
+
+  // setup your `RestLink` with your endpoint
+  private _restLink = () =>  {
+    return new RestLink({ uri: 'http://api.openweathermap.org/data/2.5/' })
   }
 }

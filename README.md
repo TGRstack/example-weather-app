@@ -10,9 +10,22 @@ Check out the folder called docs => `./docs/`
 - JOURNAL.md    - my thoughts along the way
 - PLAN.md       - plan of commits and notes for gold plating
 
+## Packages
+
+```bash
+  "dependencies": {
+    "@tgrx/apollo-link-rest": "0.6.1",  # TGR - incorporates PRs not yet published
+    "@tgrx/apollo-link-state": "0.4.3", # TGR - incorporates PRs not yet published
+    "@tgrx/gx": "1.0.0-rc4",            # TGR - incorporates PRs not yet published
+    "react": "16.7.0-alpha.2",          # EXPERIMENTAL RELEASE
+  },
+  "devDependencies": {
+    "@tgrx/tslint-config-tgr": "5.0.0", # TGR - tslint settings for minimial clutter
+```
+
 ## Demo
 
-Check out the netlify demo link: 
+Check out the netlify demo link: https://tgr-weather.netlify.com
 
 ## Getting Started
 
