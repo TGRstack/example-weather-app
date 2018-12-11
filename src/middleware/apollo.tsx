@@ -69,6 +69,6 @@ export default class ApolloClientProvider extends React.Component<IProps> {
 
   // setup your `RestLink` with your endpoint
   private _restLink = () =>  {
-    return new RestLink({ uri: 'http://api.openweathermap.org/data/2.5/' })
+    return new RestLink({ uri: 'https://api.openweathermap.org/data/2.5/' })
   }
 }
