@@ -116,9 +116,9 @@ const getForecastData = (d: IOpenWeatherForecast5): IWeatherItem[] => {
     },
     date: isoDate(unixToJsTime(i.dt)),
     temp: {
-      current: numberSingleSig(i.main.temp / 10),
-      high: numberSingleSig(i.main.temp_max / 10), // equiv. to day time estimate
-      low: numberSingleSig(i.main.temp_min / 10),  // equiv. to night time estimate
+      current: numberSingleSig(i.main.temp),
+      high: numberSingleSig(i.main.temp_max), // equiv. to day time estimate
+      low: numberSingleSig(i.main.temp_min),  // equiv. to night time estimate
     },
     time: unixToJsTime(i.dt),
   }))
