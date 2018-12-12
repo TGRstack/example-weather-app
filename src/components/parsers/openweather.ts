@@ -42,7 +42,7 @@ const getCurrentData = (d: IOpenWeatherCurrent| IList5): IWeatherItem => ({
   time: unixToJsTime(d.dt),
 })
 
-const averageOfArray = (arr: number[]): number | boolean => {
+const averageOfArray = (arr: number[]): number => {
   let avg = -1000
   if (arr.length) {
       const sum = arr.reduce((p, n) => p + n, 0)
@@ -148,37 +148,3 @@ export default function openWeatherParser({currentCity, forecastCity}: IProps): 
     requestSuccess,
   }
 }
-
-// NOTE: for aggregating 5-days into daily, keep to create hourly from 3-hours
-// const todayISO = isoDate(unixToJsTime(currentCity.dt))
-// const getForecastData = ({
-//   forecastHourly,
-//   todayISO,
-// }: {
-//   forecastHourly: IWeatherItem[],
-//   todayISO: string
-// }): IWeatherItem[] => {
-//   // forecast data comes from the API in sets of 3.
-//   // first filter out the forecast data that is for the current data
-//   // then combine all the chunks whether the date is the same
-//   //   should be 4 chunks per day, but written to take any number of daily chunks
-//   const afterToday = forecastHourly.filter(i => {
-//     const currISO = isoDate(i.time)
-//     console.log({currISO})
-//     return currISO !== todayISO
-//   })
-//   console.log({afterToday, todayISO})
-
-//   const days: IWeatherItem[] = []
-//   let currDay: IWeatherItem = {}
-//   afterToday.forEach(i => {
-//     if(iterDay) {
-
-//     } else {
-//       days.push(currDay)
-//       currDay = {}
-//     }
-//   })
-
-//   return days
-// }
