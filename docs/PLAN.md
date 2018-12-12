@@ -9,7 +9,6 @@
 7. [x] setup graphql state & network requests
 8. User welcome screen capture initial city/zipcode to use
 
-
 ## STRETCH GOALS - sorry
 9.  create WeatherDetail page per day
    1. 24-hour breakdown if available

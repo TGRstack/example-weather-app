@@ -35,9 +35,9 @@ const getCurrentData = (d: IOpenWeatherCurrent| IList5): IWeatherItem => ({
   },
   date: isoDate(unixToJsTime(d.dt)),
   temp: {
-    current: numberSingleSig(d.main.temp / 10),
-    high: numberSingleSig(d.main.temp_max / 10),
-    low: numberSingleSig(d.main.temp_min / 10),
+    current: numberSingleSig(d.main.temp),
+    high: numberSingleSig(d.main.temp_max),
+    low: numberSingleSig(d.main.temp_min),
   },
   time: unixToJsTime(d.dt),
 })
